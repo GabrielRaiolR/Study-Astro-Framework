@@ -1,11 +1,41 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Container from "../ui/Container.astro";
+import CourseCard from "../ui/CourseCard.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+
+const landings = [
+	{
+		href: "/landings/python-ia/",
+	 badge: "Curso Completo",
+		title: "Python com IA",
+		description:
+      "Landing educacional completa: hero, módulos, projetos, FAQ e formulário de conversão.",
+    meta: "11 seções · Design claro",
+	},
+	{
+    href: "/landings/react-tailwind/",
+    badge: "Workshop",
+    title: "React + Tailwind",
+    description:
+      "Versão enxuta reutilizando os mesmos componentes com conteúdo diferente.",
+    meta: "8 seções · Mesma arquitetura",
+  },
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Índice de Landings | Astro Study"
+description="Repositório único com múltiplas landing pages de cursos fictícios.">
+  <section class="py-16 md:py-24">
+   <Container>
+    <SectionTitle eyebrow="Repositório"
+				title="Múltiplas landing pages, um único projeto"
+				description="Cada rota em src/pages/landings/ compõe seções reutilizáveis — simulando um ambiente real de marketing." />
+
+				<div class="mt-10 grid gap-6 md:grid-cols-2">
+					{landings.map((landing) => <CourseCard {...landing} />)}
+				</div>
+   </Container>
+  </section>
+</BaseLayout>

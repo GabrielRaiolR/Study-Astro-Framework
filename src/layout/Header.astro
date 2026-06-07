@@ -1,0 +1,41 @@
+---
+
+import Container from "../ui/Container.astro";
+import Button from "../ui/Button.astro";
+
+const navLinks = [
+ {
+ label: "Conteúdo", href: "#modulos"
+ },
+ {
+  label: "Projetos", href: "#projetos"
+ },
+ {
+  label: "FAQ", href: "#faq"
+ }
+];
+
+---
+
+<header class="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur-sm">
+  <Container class="flex items-center justify-between py-4">
+   <a href="/" class="text-lg font-bold text-text">
+   Astro<span class="text-primary">Study</span></a>
+   <nav
+      class="hidden items-center gap-8 text-sm font-medium text-text-muted md:flex"
+      aria-label="Navegação principal"
+    >
+   {
+    navLinks.map((link) => (
+      <a href={link.href} class="transition hover:text-primary">
+        {link.label}
+      </a>
+    ))
+  }
+   </nav>
+
+   <Button href="#lead" variant="primary" class="!px-4 !px-2 !text-sm">
+    Entrar na lista
+   </Button>
+  </Container>
+</header>

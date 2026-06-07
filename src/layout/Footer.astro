@@ -1,0 +1,44 @@
+---
+
+import Container from "../ui/Container.astro";
+
+---
+
+<footer class="border-t border-border bg-card py-12">
+  <Container>
+   <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+    <div>
+     <p class="text-lg font-bold text-text">
+      Astro<span class="text-primary">Study</span>
+     </p>
+     <p>
+       Projeto de estudo com Astro, React e Tailwind — múltiplas landing pages
+       em um único repositório.
+     </p>
+    </div>
+
+    <nav class="flex gap-12 text-sm" aria-label="Links do rodapé">
+     <div>
+      <p class="font-semibold text-text">Landings</p>
+      <ul class="mt-3 space-y-2 text-text-muted">
+       <li>
+        <a href="/landings/python-ia/" class="hover:text-primary">Python com IA</a>
+       </li>
+       <li><a href="/landings/react-ia/" class="hover:text-primary">React + Tailwind</a></li>
+      </ul>
+     </div>
+     <div>
+      <p class="font-semibold text-text">Legal</p>
+      <ul class="mt-3 space-y-2 text-text-muted">
+       <li><a href="#" class="hover:text-primary">Política de Privacidade</a></li>
+       <li><a href="#" class="hover:text-primary">Termos de Uso</a></li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+
+   <p class="mt-10 border-t border-border pt-6 text-center text-xs text-text-muted">
+    © {new Date().getFullYear()} Astro Study — projeto fictício para portfólio.
+  </p>
+  </Container>
+</footer>

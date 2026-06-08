@@ -1,0 +1,65 @@
+---
+
+const modules = ["Introdução", "Python básico", "Pandas & dados", "IA aplicada"];
+
+---
+
+<div
+  class="overflow-hidden rounded-xl border border-border bg-card shadow-lg"
+  role="img"
+  aria-label="Preview fictício da plataforma de aulas"
+>
+  <div class="flex items-center gap-2 border-b border-border bg-page px-4 py-3">
+    <span class="h-2.5 w-2.5 rounded-full bg-red-400"></span>
+    <span class="h-2.5 w-2.5 rounded-full bg-amber-400"></span>
+    <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
+    <span class="ml-2 text-xs text-text-muted">plataforma.astrostudy.dev</span>
+  </div>
+
+  <div class="flex min-h-[280px]">
+    <aside class="hidden w-36 shrink-0 border-r border-border bg-page p-3 sm:block">
+      <p class="text-[10px] font-semibold uppercase tracking-wide text-text-muted">
+        Módulos
+      </p>
+      <ul class="mt-2 space-y-1">
+        {
+          modules.map((mod, i) => (
+            <li
+              class:list={[
+                "rounded-md px-2 py-1.5 text-xs",
+                i === 2
+                  ? "bg-primary-light font-medium text-primary"
+                  : "text-text-muted",
+              ]}
+            >
+              {mod}
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
+
+    <div class="flex-1 p-4">
+      <div class="relative aspect-video overflow-hidden rounded-lg bg-gradient-to-br from-slate-100 to-slate-200">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-md">
+            <span class="ml-1 text-xl text-white">▶</span>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-slate-200">
+          <div class="h-full w-2/3 rounded-full bg-primary"></div>
+        </div>
+      </div>
+
+      <div class="mt-3 flex items-center justify-between gap-2">
+        <div>
+          <p class="text-sm font-semibold text-text">Aula 3 — Análise com Pandas</p>
+          <p class="text-xs text-text-muted">12 min · Exercício prático</p>
+        </div>
+        <span class="shrink-0 rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
+          67%
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

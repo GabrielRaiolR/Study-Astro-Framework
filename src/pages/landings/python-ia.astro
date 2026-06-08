@@ -1,7 +1,7 @@
 ---
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
+import Hero from "../../sections/Hero.astro";
 
 ---
 
@@ -9,5 +9,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   title="Python com IA | Curso prático — Astro Study"
   description="Aprenda Python criando projetos reais com IA. Curso fictício para demonstração de landing page educacional profissional."
 >
+  <Hero title="Aprenda Python criando projetos reais com IA"
+  description="Do básico ao avançado: construa automações, analise dados e integre inteligência artificial no seu fluxo como desenvolvedor."
+  primaryCta={{ label: "Entrar", href: "#lead" }}
+  secondaryCta={{ label: "Ver conteúdo", href: "#modulos" }} />
 
 </BaseLayout>
